@@ -2114,3 +2114,56 @@ textarea:focus-visible {
   }
 }
 
+/* FIX: KEEP VEHICLE PHOTOS INSIDE THEIR CARDS */
+.vehicle-card {
+  overflow: hidden;
+  min-width: 0;
+}
+
+.vehicle-card img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 240px;
+  object-fit: contain;
+  box-sizing: border-box;
+}
+
+/* RESPONSIVE IMAGE HEIGHT ON PHONES */
+@media (max-width: 600px) {
+  .vehicle-card img {
+    height: 200px;
+  }
+}
+
+/* FIX: KEEP WHATSAPP BUTTON WITHIN THE PHONE SCREEN */
+.whatsapp-float {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  left: auto;
+  z-index: 1000;
+  max-width: calc(100vw - 32px);
+  box-sizing: border-box;
+}
+
+.whatsapp-float a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.whatsapp-float span {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    right: 12px;
+    bottom: 16px;
+  }
+}
+
