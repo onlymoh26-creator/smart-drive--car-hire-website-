@@ -1999,3 +1999,45 @@ textarea:focus-visible {
   }
 }
 
+/* MOBILE HEADER ALIGNMENT FIX */
+@media (max-width: 768px) {
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    gap: 12px;
+  }
+
+  .site-header .brand {
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .site-header .brand-logo {
+    display: block;
+    margin: 0;
+  }
+
+  .site-header .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    margin: 0 0 0 auto;
+    align-self: center;
+  }
+
+  .site-header .site-nav {
+    top: 100%;
+    right: 16px;
+    left: 16px;
+  }
+}
+
