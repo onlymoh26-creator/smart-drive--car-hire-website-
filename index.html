@@ -1,428 +1,795 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SMART DRIVE CAR HIRE SERVICES | Car Hire Across Kenya</title>
+
+  <meta
+    name="description"
+    content="SMART DRIVE CAR HIRE SERVICES provides reliable and affordable self-drive and chauffeur-driven car hire across Kenya. We offer a range of vehicles for business trips, family travel, holidays and special occasions, subject to availability."
+  >
+
   <meta name="theme-color" content="#080808">
-  <meta name="description" content="Explore Smart Drive Car Hire Services. Browse our vehicle fleet, compare rental options and request your booking through WhatsApp.">
-  <title>Smart Drive Car Hire Services | Drive Smart</title>
+
   <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+
+  <link
+    rel="icon"
+    href="images/smart-drive-car-hire-logo.png"
+    type="image/png"
+  >
 </head>
+
 <body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
 
+  <!-- HEADER -->
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Smart Drive home">
-      <img
-        class="brand-logo"
-        src="images/smart-drive-car-hire-logo.png"
-        alt="Smart Drive Car Hire Services logo"
+    <div class="header-inner">
+
+      <a class="brand" href="#home" aria-label="Smart Drive Car Hire home">
+        <img
+          src="images/smart-drive-car-hire-logo.png"
+          alt="Smart Drive Car Hire Services logo"
+          class="brand-logo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        >
+
+        <span class="brand-fallback" style="display:none;">
+          SMART DRIVE
+          <small>CAR HIRE SERVICES</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
       >
-      <span class="brand-fallback">
-        <strong>SMART DRIVE</strong>
-        <small>CAR HIRE SERVICES</small>
-      </span>
-    </a>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-    <button
-      class="menu-toggle"
-      id="menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false"
-      aria-controls="primary-navigation"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <nav class="site-nav" id="primary-navigation">
+        <a href="#home">Home</a>
+        <a href="#vehicles">Our Vehicles</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking" class="button button-gold">Book a Vehicle</a>
+      </nav>
 
-    <nav class="site-nav" id="primary-navigation" aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#categories">Vehicles</a>
-      <a href="#services">Our Services</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-      <a class="nav-cta" href="#booking">Enquire Now</a>
-    </nav>
+    </div>
   </header>
 
-  <main id="main-content">
-    <section class="hero" id="home" aria-label="Smart Drive introduction">
-      <div class="hero-slides" id="hero-slides" aria-hidden="true">
-        <div class="hero-slide is-active"></div>
-        <div class="hero-slide"></div>
-        <div class="hero-slide"></div>
-      </div>
-      <div class="hero-overlay"></div>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
 
       <div class="hero-content">
-        <p class="eyebrow">YOUR JOURNEY, OUR PRIORITY</p>
-        <h1>Drive Smart.<br><span>Travel in Comfort.</span></h1>
+        <p class="eyebrow">YOUR JOURNEY. OUR PRIORITY.</p>
+
+        <h1>
+          SMART DRIVE
+          <span>CAR HIRE SERVICES</span>
+        </h1>
+
         <p class="hero-description">
-          Find the right vehicle for your next journey with
-          Smart Drive Car Hire Services.
+          SMART DRIVE CAR HIRE SERVICES provides reliable and affordable
+          self-drive and chauffeur-driven car hire across Kenya. We offer
+          a range of vehicles for business trips, family travel, holidays
+          and special occasions, subject to availability.
         </p>
+
         <div class="hero-actions">
-          <a class="button button-gold" href="#categories">Explore Our Fleet</a>
-          <a class="button button-outline" href="#booking">Make an Enquiry</a>
+          <a href="#vehicles" class="button button-gold">
+            Explore Our Fleet
+          </a>
+
+          <a href="#booking" class="button button-outline">
+            Request a Booking
+          </a>
         </div>
-        <p class="hero-tagline">DRIVE SMART | TRAVEL COMFORT | ARRIVE SAFE</p>
+
+        <p class="hero-tagline">
+          DRIVE SMART | TRAVEL COMFORT | ARRIVE SAFE
+        </p>
       </div>
 
-      <div class="hero-indicators" id="hero-indicators"
-           aria-label="Slideshow controls">
-        <button type="button" data-slide="0" aria-label="Show slide 1"
-                class="is-active"></button>
-        <button type="button" data-slide="1" aria-label="Show slide 2"></button>
-        <button type="button" data-slide="2" aria-label="Show slide 3"></button>
-      </div>
     </section>
 
+
+    <!-- TRUST / SERVICE STRIP -->
     <section class="trust-strip" aria-label="Our service highlights">
-      <div><strong>24/7</strong><span>Customer Support</span></div>
-      <div><strong>Self Drive</strong><span>Travel Your Way</span></div>
-      <div><strong>Chauffeur</strong><span>Professional Service</span></div>
-      <div><strong>Delivery</strong><span>Subject to Availability</span></div>
+      <div class="trust-item">
+        <strong>24/7</strong>
+        <span>Customer Support</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>SELF DRIVE</strong>
+        <span>Drive at Your Pace</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>CHAUFFEUR</strong>
+        <span>Professional Travel Option</span>
+      </div>
+
+      <div class="trust-item">
+        <strong>DELIVERY</strong>
+        <span>Subject to Availability</span>
+      </div>
     </section>
 
-    <section class="section categories-section" id="categories">
+
+    <!-- VEHICLE CATEGORIES -->
+    <section class="section category-section" id="categories">
+
       <div class="section-heading">
-        <p class="eyebrow">FIND YOUR RIDE</p>
-        <h2>Explore Our <span>Vehicle Categories</span></h2>
-        <p>Choose a category to discover vehicles for your journey.</p>
+        <p class="eyebrow">FIND YOUR PERFECT RIDE</p>
+        <h2>Explore Our Vehicle Categories</h2>
+        <p>
+          Choose a vehicle category that suits your journey, group size
+          and budget. All bookings are subject to availability.
+        </p>
       </div>
 
       <div class="category-grid" id="category-grid">
-        <a class="category-card" href="#fleet" data-category-link="small">
-          <div class="category-image category-image-small"></div>
+
+        <a class="category-card" href="#vehicles" data-category-link="small">
+          <img
+            src="images/category-small.jpg"
+            alt="Economy and compact rental cars"
+            loading="lazy"
+          >
           <div class="category-card-content">
-            <h3>Small Cars</h3>
-            <p>Compact options for everyday travel.</p>
-            <span>Explore Cars ↗</span>
+            <h3>Economy Cars</h3>
+            <p>Practical options for everyday travel.</p>
+            <span>Explore Cars →</span>
           </div>
         </a>
 
-        <a class="category-card" href="#fleet" data-category-link="medium">
-          <div class="category-image category-image-medium"></div>
+        <a class="category-card" href="#vehicles" data-category-link="medium">
+          <img
+            src="images/category-medium.jpg"
+            alt="Sedan and medium-size rental cars"
+            loading="lazy"
+          >
           <div class="category-card-content">
-            <h3>Medium Cars</h3>
-            <p>Comfortable sedans for your journey.</p>
-            <span>Explore Cars ↗</span>
+            <h3>Sedans</h3>
+            <p>Comfortable options for business and personal trips.</p>
+            <span>Explore Cars →</span>
           </div>
         </a>
 
-        <a class="category-card" href="#fleet" data-category-link="midsize-suv">
-          <div class="category-image category-image-midsize"></div>
+        <a class="category-card" href="#vehicles" data-category-link="midsize-suv">
+          <img
+            src="images/category-midsize-suv.jpg"
+            alt="Mid-size SUV rental vehicle"
+            loading="lazy"
+          >
           <div class="category-card-content">
             <h3>Mid-Size SUVs</h3>
-            <p>Versatility and extra room.</p>
-            <span>Explore SUVs ↗</span>
+            <p>Extra space for different travel needs.</p>
+            <span>Explore SUVs →</span>
           </div>
         </a>
 
-        <a class="category-card" href="#fleet" data-category-link="suv">
-          <div class="category-image category-image-suv"></div>
+        <a class="category-card" href="#vehicles" data-category-link="suv">
+          <img
+            src="images/category-suv.jpg"
+            alt="SUV and four-wheel-drive rental vehicles"
+            loading="lazy"
+          >
           <div class="category-card-content">
-            <h3>SUVs &amp; 4×4</h3>
-            <p>Space and capability for your plans.</p>
-            <span>Explore SUVs ↗</span>
+            <h3>SUVs & 4x4s</h3>
+            <p>Options for longer journeys and varied terrain.</p>
+            <span>Explore SUVs →</span>
           </div>
         </a>
 
-        <a class="category-card" href="#fleet" data-category-link="family">
-          <div class="category-image category-image-family"></div>
+        <a class="category-card" href="#vehicles" data-category-link="family">
+          <img
+            src="images/category-family.jpg"
+            alt="Family and seven-seater rental vehicle"
+            loading="lazy"
+          >
           <div class="category-card-content">
             <h3>Family Vehicles</h3>
-            <p>Room for family and group travel.</p>
-            <span>Explore Vehicles ↗</span>
+            <p>More seating and space for group travel.</p>
+            <span>Explore Vehicles →</span>
           </div>
         </a>
 
-        <a class="category-card" href="#fleet" data-category-link="van">
-          <div class="category-image category-image-van"></div>
+        <a class="category-card" href="#vehicles" data-category-link="van">
+          <img
+            src="images/category-van.jpg"
+            alt="Van and spacious passenger rental vehicle"
+            loading="lazy"
+          >
           <div class="category-card-content">
-            <h3>Vans &amp; Spacious Vehicles</h3>
-            <p>Practical options for larger groups.</p>
-            <span>Explore Vehicles ↗</span>
+            <h3>Vans & Spacious Cars</h3>
+            <p>Options for larger groups and special trips.</p>
+            <span>Explore Vehicles →</span>
           </div>
         </a>
+
       </div>
     </section>
 
-    <section class="section fleet-section" id="fleet">
+
+    <!-- VEHICLE FLEET -->
+    <section class="section fleet-section" id="vehicles">
+
       <div class="section-heading">
-        <p class="eyebrow">THE SMART DRIVE COLLECTION</p>
-        <h2>Find Your <span>Ideal Vehicle</span></h2>
-        <p>Explore individual vehicles and compare similar options.</p>
+        <p class="eyebrow">OUR VEHICLE COLLECTION</p>
+        <h2>Find Your Next Rental Car</h2>
+        <p>
+          Browse available vehicle options, compare daily rates and
+          send us your preferred booking details.
+        </p>
       </div>
 
-      <div class="fleet-tools">
-        <label class="search-label" for="vehicle-search">Search vehicles</label>
-        <input id="vehicle-search" type="search"
-               placeholder="Search by vehicle name...">
+      <div class="fleet-toolbar">
 
-        <div class="filter-list" id="fleet-filters"
-             aria-label="Filter vehicles by category">
-          <button class="filter-button is-active" data-filter="all" type="button">
+        <label class="visually-hidden" for="vehicle-search">
+          Search vehicles
+        </label>
+
+        <input
+          type="search"
+          id="vehicle-search"
+          placeholder="Search by vehicle name..."
+          autocomplete="off"
+        >
+
+        <div class="fleet-filters" id="fleet-filters">
+          <button type="button" class="filter-button active" data-filter="all">
             All Vehicles
           </button>
-          <button class="filter-button" data-filter="small" type="button">
-            Small Cars
+
+          <button type="button" class="filter-button" data-filter="small">
+            Economy
           </button>
-          <button class="filter-button" data-filter="medium" type="button">
-            Medium Cars
+
+          <button type="button" class="filter-button" data-filter="medium">
+            Sedans
           </button>
-          <button class="filter-button" data-filter="midsize-suv" type="button">
+
+          <button type="button" class="filter-button" data-filter="midsize-suv">
             Mid-Size SUVs
           </button>
-          <button class="filter-button" data-filter="suv" type="button">
-            SUVs &amp; 4×4
+
+          <button type="button" class="filter-button" data-filter="suv">
+            SUVs & 4x4s
           </button>
-          <button class="filter-button" data-filter="family" type="button">
-            Family Vehicles
+
+          <button type="button" class="filter-button" data-filter="family">
+            Family Cars
           </button>
-          <button class="filter-button" data-filter="van" type="button">
+
+          <button type="button" class="filter-button" data-filter="van">
             Vans
           </button>
         </div>
+
       </div>
 
-      <p class="results-count" id="fleet-result-count" aria-live="polite">
-        Loading vehicles...
-      </p>
+      <!-- app.js inserts the vehicle cards here -->
+      <div class="vehicle-grid fleet-grid" id="fleet-grid"></div>
 
-      <div class="vehicle-grid" id="fleet-grid">
-        <!-- Vehicle cards will be created by app.js. -->
-      </div>
-
-      <p class="empty-message" id="fleet-empty-message" hidden>
-        No vehicles match your search. Try another name or category.
-      </p>
-    </section>
-
-    <section class="similar-section" id="similar-vehicles" hidden>
-      <div class="section-heading">
-        <p class="eyebrow">OTHER OPTIONS</p>
-        <h2>Or <span>Similar Vehicles</span></h2>
-        <p>Explore other vehicles in the same category.</p>
-      </div>
-      <div class="vehicle-grid" id="similar-grid"></div>
-    </section>
-
-    <section class="section booking-section" id="booking">
-      <div class="booking-intro">
-        <p class="eyebrow">PLAN YOUR JOURNEY</p>
-        <h2>Request a <span>Rental</span></h2>
+      <div class="fleet-note">
         <p>
-          Tell us what you need. We'll receive your enquiry through WhatsApp
-          and assist with the next steps.
+          Prices are quoted per 24-hour rental period unless otherwise
+          agreed. Confirm availability, delivery arrangements, applicable
+          terms and the final quotation with our team before paying.
         </p>
-        <ul class="booking-benefits">
-          <li>Choose your preferred vehicle</li>
-          <li>Provide your rental dates and location</li>
-          <li>Receive assistance from our team</li>
-        </ul>
       </div>
 
-      <form class="booking-form" id="booking-form">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="customer-name">Full name *</label>
-            <input id="customer-name" name="customerName"
-                   autocomplete="name" required>
-          </div>
-          <div class="form-field">
-            <label for="customer-phone">Phone number *</label>
-            <input id="customer-phone" name="customerPhone"
-                   type="tel" autocomplete="tel" required>
-          </div>
+    </section>
+
+
+    <!-- BOOKING SECTION -->
+    <section class="section booking-section" id="booking">
+
+      <div class="section-heading">
+        <p class="eyebrow">START YOUR JOURNEY</p>
+        <h2>Request a Vehicle Booking</h2>
+        <p>
+          Share your travel details below. Your enquiry will be prepared
+          for WhatsApp so our team can confirm availability and pricing.
+        </p>
+      </div>
+
+      <div class="booking-layout">
+
+        <div class="booking-intro">
+          <h3>Let's plan your trip.</h3>
+
+          <p>
+            Tell us which vehicle you need, when you need it and where
+            you would like to collect it. Our team will respond with
+            the next steps.
+          </p>
+
+          <ul>
+            <li>Self-drive and chauffeur-driven options</li>
+            <li>Short-term and long-term rental enquiries</li>
+            <li>Vehicle delivery, subject to availability</li>
+            <li>Bookings for business, family and personal travel</li>
+          </ul>
+
+          <p class="booking-disclaimer">
+            Submitting an enquiry does not automatically confirm a
+            reservation. A booking is confirmed only after availability,
+            charges and payment arrangements have been agreed.
+          </p>
         </div>
 
-        <div class="form-field">
-          <label for="customer-email">Email address</label>
-          <input id="customer-email" name="customerEmail"
-                 type="email" autocomplete="email">
-        </div>
+        <form id="booking-form" class="booking-form">
 
-        <div class="form-field">
-          <label for="booking-vehicle">Preferred vehicle *</label>
-          <select id="booking-vehicle" name="vehicle" required>
-            <option value="">Select a vehicle</option>
-          </select>
-        </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customer-name">Full Name *</label>
+              <input
+                type="text"
+                id="customer-name"
+                name="customerName"
+                autocomplete="name"
+                required
+              >
+            </div>
 
-        <div class="form-row">
-          <div class="form-field">
-            <label for="rental-start">Pickup date *</label>
-            <input id="rental-start" name="startDate"
-                   type="date" required>
-          </div>
-          <div class="form-field">
-            <label for="rental-end">Return date *</label>
-            <input id="rental-end" name="endDate"
-                   type="date" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-field">
-            <label for="vehicle-quantity">Number of vehicles *</label>
-            <div class="quantity-control">
-              <button type="button" id="quantity-minus"
-                      aria-label="Decrease vehicle quantity">−</button>
-              <input id="vehicle-quantity" name="quantity"
-                     type="number" min="1" max="20" value="1" required>
-              <button type="button" id="quantity-plus"
-                      aria-label="Increase vehicle quantity">+</button>
+            <div class="form-group">
+              <label for="customer-phone">Phone Number *</label>
+              <input
+                type="tel"
+                id="customer-phone"
+                name="customerPhone"
+                autocomplete="tel"
+                placeholder="e.g. 07XXXXXXXX"
+                required
+              >
             </div>
           </div>
-          <div class="form-field">
-            <label for="rental-service">Rental service *</label>
-            <select id="rental-service" name="service" required>
-              <option value="Self-drive">Self-drive</option>
-              <option value="Chauffeur-driven">Chauffeur-driven</option>
+
+          <div class="form-group">
+            <label for="customer-email">Email Address (Optional)</label>
+            <input
+              type="email"
+              id="customer-email"
+              name="customerEmail"
+              autocomplete="email"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="booking-vehicle">Preferred Vehicle *</label>
+            <select id="booking-vehicle" name="vehicle" required>
+              <option value="">Select a vehicle</option>
             </select>
           </div>
-        </div>
 
-        <div class="form-field">
-          <label for="pickup-location">Pickup location *</label>
-          <input id="pickup-location" name="pickupLocation"
-                 autocomplete="street-address" required>
-        </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rental-start">Rental Start Date *</label>
+              <input
+                type="date"
+                id="rental-start"
+                name="rentalStart"
+                required
+              >
+            </div>
 
-        <div class="form-field">
-          <label for="delivery-required">Do you need vehicle delivery?</label>
-          <select id="delivery-required" name="delivery">
-            <option value="No">No</option>
-            <option value="Yes">Yes — please advise availability</option>
-          </select>
-        </div>
+            <div class="form-group">
+              <label for="rental-end">Rental End Date *</label>
+              <input
+                type="date"
+                id="rental-end"
+                name="rentalEnd"
+                required
+              >
+            </div>
+          </div>
 
-        <div class="form-field">
-          <label for="booking-message">Additional requests</label>
-          <textarea id="booking-message" name="message" rows="3"
-                    placeholder="Tell us about any special requirements."></textarea>
-        </div>
+          <div class="form-group quantity-group">
+            <label for="vehicle-quantity">Number of Vehicles</label>
 
-        <button class="button button-gold button-full" type="submit">
-          Continue to WhatsApp
-        </button>
-        <p class="form-note">
-          Your booking details will be prepared in a WhatsApp message for
-          you to review and send.
-        </p>
-        <p class="form-status" id="booking-status" aria-live="polite"></p>
-      </form>
+            <div class="quantity-control">
+              <button
+                type="button"
+                id="quantity-minus"
+                aria-label="Reduce vehicle quantity"
+              >−</button>
+
+              <input
+                type="number"
+                id="vehicle-quantity"
+                name="vehicleQuantity"
+                value="1"
+                min="1"
+                max="20"
+                inputmode="numeric"
+                required
+              >
+
+              <button
+                type="button"
+                id="quantity-plus"
+                aria-label="Increase vehicle quantity"
+              >+</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="rental-service">Rental Service *</label>
+            <select id="rental-service" name="rentalService" required>
+              <option value="">Choose a service</option>
+              <option value="Self-drive">Self-drive</option>
+              <option value="Chauffeur-driven">Chauffeur-driven</option>
+              <option value="Long-term leasing">Long-term leasing</option>
+              <option value="Corporate or group hire">Corporate or group hire</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="pickup-location">Pickup Location *</label>
+            <input
+              type="text"
+              id="pickup-location"
+              name="pickupLocation"
+              placeholder="Town, area or preferred delivery location"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="delivery-required">Do You Require Delivery?</label>
+            <select id="delivery-required" name="deliveryRequired">
+              <option value="No">No</option>
+              <option value="Yes, subject to availability">
+                Yes, subject to availability
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="booking-message">Additional Requirements (Optional)</label>
+            <textarea
+              id="booking-message"
+              name="bookingMessage"
+              rows="4"
+              placeholder="Tell us about your trip or any special requirements."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="button button-gold booking-submit">
+            Continue to WhatsApp
+          </button>
+
+          <p id="booking-status" class="booking-status" aria-live="polite"></p>
+
+          <p class="form-privacy-note">
+            Your enquiry details are used to respond to your booking request.
+            Review the details in WhatsApp before sending.
+          </p>
+
+        </form>
+
+      </div>
     </section>
 
+
+    <!-- SERVICES -->
     <section class="section services-section" id="services">
+
       <div class="section-heading">
-        <p class="eyebrow">MORE THAN JUST A CAR</p>
-        <h2>Our <span>Services</span></h2>
-        <p>Transport solutions for different journeys and needs.</p>
+        <p class="eyebrow">TRAVEL YOUR WAY</p>
+        <h2>Our Car Hire Services</h2>
+        <p>
+          Flexible vehicle rental options for different journeys and needs.
+        </p>
       </div>
 
       <div class="services-grid">
+
         <article class="service-card">
-          <span class="service-icon" aria-hidden="true">01</span>
+          <div class="service-icon" aria-hidden="true">01</div>
           <h3>Self-Drive Car Hire</h3>
-          <p>Choose your preferred vehicle and enjoy the flexibility of driving yourself.</p>
+          <p>
+            Choose a suitable vehicle for your own itinerary, personal
+            travel or business journey, subject to our rental requirements.
+          </p>
         </article>
+
         <article class="service-card">
-          <span class="service-icon" aria-hidden="true">02</span>
-          <h3>Chauffeur-Driven</h3>
-          <p>Arrange transport with a professional driver for your journey.</p>
+          <div class="service-icon" aria-hidden="true">02</div>
+          <h3>Chauffeur-Driven Hire</h3>
+          <p>
+            Request a driver for business engagements, airport transfers,
+            family occasions and other planned journeys.
+          </p>
         </article>
+
         <article class="service-card">
-          <span class="service-icon" aria-hidden="true">03</span>
+          <div class="service-icon" aria-hidden="true">03</div>
           <h3>Vehicle Delivery</h3>
-          <p>Ask about delivery arrangements, subject to location and availability.</p>
+          <p>
+            Ask about delivery to your preferred location. Delivery
+            arrangements and any related charges must be confirmed.
+          </p>
         </article>
+
         <article class="service-card">
-          <span class="service-icon" aria-hidden="true">04</span>
+          <div class="service-icon" aria-hidden="true">04</div>
           <h3>Long-Term Leasing</h3>
-          <p>Enquire about vehicle arrangements for extended rental requirements.</p>
+          <p>
+            Enquire about extended rental arrangements for individuals,
+            businesses and organisations with ongoing transport needs.
+          </p>
         </article>
+
       </div>
     </section>
 
-    <section class="section reviews-section" id="reviews">
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why-section">
+
       <div class="section-heading">
-        <p class="eyebrow">YOUR EXPERIENCE MATTERS</p>
-        <h2>Customer <span>Reviews</span></h2>
-        <p>Customer feedback will be featured here.</p>
+        <p class="eyebrow">A BETTER WAY TO RENT</p>
+        <h2>Why Choose Smart Drive?</h2>
+      </div>
+
+      <div class="why-grid">
+
+        <article class="why-card">
+          <h3>Vehicle Choice</h3>
+          <p>
+            Explore different vehicle categories to find an option that
+            suits your trip and budget.
+          </p>
+        </article>
+
+        <article class="why-card">
+          <h3>Convenient Enquiries</h3>
+          <p>
+            Send your preferred dates and vehicle details directly to our
+            team through WhatsApp.
+          </p>
+        </article>
+
+        <article class="why-card">
+          <h3>Flexible Travel Options</h3>
+          <p>
+            Enquire about self-drive, chauffeur-driven, corporate and
+            longer-term rental arrangements.
+          </p>
+        </article>
+
+        <article class="why-card">
+          <h3>Clear Booking Process</h3>
+          <p>
+            Confirm availability, rental terms, payment arrangements and
+            any additional charges before your reservation is finalised.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section class="section reviews-section" id="reviews">
+
+      <div class="section-heading">
+        <p class="eyebrow">CUSTOMER FEEDBACK</p>
+        <h2>Experiences Matter</h2>
+        <p>
+          We aim to provide a convenient and professional car hire
+          experience. Genuine customer reviews will be published here
+          as they are received and approved for display.
+        </p>
       </div>
 
       <div class="reviews-grid" id="reviews-grid">
-        <!-- Add genuine customer reviews here after obtaining permission. -->
+
         <article class="review-card">
-          <p class="review-placeholder">
-            Your customers' feedback will appear here.
+          <div class="review-stars" aria-label="Customer rating">
+            Customer feedback
+          </div>
+          <h3>Your experience matters.</h3>
+          <p>
+            Have you hired a vehicle from Smart Drive Car Hire Services?
+            Share your feedback with our team to help other customers
+            make informed decisions.
           </p>
+          <a
+            href="https://wa.me/254733920806?text=Hello%20Smart%20Drive%2C%20I%20would%20like%20to%20share%20feedback%20about%20my%20car%20hire%20experience."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Share Your Feedback →
+          </a>
         </article>
+
       </div>
+
     </section>
 
+
+    <!-- CONTACT BANNER -->
     <section class="contact-banner">
-      <p class="eyebrow">LET'S GET YOU MOVING</p>
-      <h2>Ready for Your Next Journey?</h2>
-      <p>Contact Smart Drive Car Hire Services to discuss your requirements.</p>
-      <a class="button button-gold"
-         href="https://wa.me/254733920806?text=Hello%20Smart%20Drive%2C%20I%20would%20like%20to%20inquire%20about%20your%20car%20hire%20services.">
-        Enquire on WhatsApp
-      </a>
+
+      <div class="contact-banner-content">
+        <p class="eyebrow">READY FOR YOUR NEXT JOURNEY?</p>
+        <h2>Let's Find the Right Vehicle for You.</h2>
+        <p>
+          Contact our team to enquire about vehicles, rental dates,
+          prices and availability.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/254733920806"
+            class="button button-gold"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chat on WhatsApp
+          </a>
+
+          <a href="#booking" class="button button-outline">
+            Request a Booking
+          </a>
+        </div>
+      </div>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer class="site-footer" id="contact">
+
     <div class="footer-grid">
+
       <div class="footer-brand">
-        <img src="images/smart-drive-car-hire-logo.png"
-             alt="Smart Drive Car Hire Services logo"
-             class="footer-logo">
-        <h2>SMART DRIVE CAR HIRE SERVICES</h2>
-        <p>DRIVE SMART | TRAVEL COMFORT | ARRIVE SAFE</p>
-        <p>Vehicle hire for your journey, your way.</p>
+        <a href="#home" class="brand">
+          <img
+            src="images/smart-drive-car-hire-logo.png"
+            alt="Smart Drive Car Hire Services logo"
+            class="brand-logo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+          >
+
+          <span class="brand-fallback" style="display:none;">
+            SMART DRIVE
+            <small>CAR HIRE SERVICES</small>
+          </span>
+        </a>
+
+        <p>
+          Reliable and affordable self-drive and chauffeur-driven car hire
+          across Kenya, subject to availability.
+        </p>
+
+        <p class="footer-tagline">
+          DRIVE SMART | TRAVEL COMFORT | ARRIVE SAFE
+        </p>
       </div>
 
-      <div>
+
+      <div class="footer-links">
         <h3>Quick Links</h3>
         <a href="#home">Home</a>
-        <a href="#categories">Vehicle Categories</a>
-        <a href="#fleet">Our Fleet</a>
+        <a href="#vehicles">Our Vehicles</a>
         <a href="#services">Our Services</a>
-        <a href="#reviews">Customer Reviews</a>
+        <a href="#booking">Request a Booking</a>
+        <a href="#reviews">Customer Feedback</a>
       </div>
 
-      <div>
+
+      <div class="footer-contact">
         <h3>Contact Us</h3>
-        <a href="tel:+254762006618">Call: 0762006618</a>
-        <a href="https://wa.me/254733920806?text=Hello%20Smart%20Drive%2C%20I%20would%20like%20to%20inquire%20about%20your%20car%20hire%20services."
-           target="_blank" rel="noopener noreferrer">
-          WhatsApp: 0733920806
-        </a>
-        <a href="mailto:smartdrivecarhire@gmail.com">
-          smartdrivecarhire@gmail.com
-        </a>
-        <p>Customer support: 24/7</p>
+
+        <p>
+          <strong>Office:</strong>
+          <a href="tel:0208270963">020 827 0963</a>
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          <a href="tel:+254762006618">0762 006 618</a>
+        </p>
+
+        <p>
+          <strong>WhatsApp:</strong>
+          <a href="https://wa.me/254733920806" target="_blank" rel="noopener noreferrer">
+            0733 920 806
+          </a>
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:booking.smartdrivecarhire@gmail.com">
+            booking.smartdrivecarhire@gmail.com
+          </a>
+        </p>
+
+        <p><strong>Support:</strong> 24/7 enquiries</p>
       </div>
+
+
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+
+        <a
+          href="https://www.instagram.com/smart_drive_car.hire?psln=NnhvbXkwZ3NoZnhp&utm_source=qr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@smartcarhireservices?_r=1&_t=ZS-9ArIhViqD3J"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          TikTok
+        </a>
+
+        <a
+          href="https://www.facebook.com/share/19kptLaP9B/?mibextid=wwXIfr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+      </div>
+
     </div>
 
     <div class="footer-bottom">
-      <p>© <span id="current-year"></span> Smart Drive Car Hire Services. All rights reserved.</p>
-      <a href="#home">Back to top ↑</a>
+      <p>
+        © <span id="current-year"></span> SMART DRIVE CAR HIRE SERVICES.
+        All rights reserved.
+      </p>
+
+      <p>
+        Vehicle availability, prices and rental terms must be confirmed
+        before booking.
+      </p>
     </div>
+
   </footer>
 
-  <a class="floating-whatsapp"
-     href="https://wa.me/254733920806?text=Hello%20Smart%20Drive%2C%20I%20would%20like%20to%20inquire%20about%20your%20car%20hire%20services."
-     target="_blank" rel="noopener noreferrer"
-     aria-label="Contact Smart Drive on WhatsApp">
-    WhatsApp
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    href="https://wa.me/254733920806"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Smart Drive on WhatsApp"
+  >
+    <span aria-hidden="true">◉</span>
+    <span>WhatsApp Us</span>
   </a>
+
+
+  <!-- EXISTING WEBSITE JAVASCRIPT -->
+  <script src="app.js" defer></script>
+
 </body>
 </html>
