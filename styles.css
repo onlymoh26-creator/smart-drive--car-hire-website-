@@ -2167,7 +2167,7 @@ textarea:focus-visible {
   }
 }
 
-/* SMART DRIVE HERO SLIDER */
+/* HERO SLIDER LAYERS */
 .hero-section {
   position: relative;
   isolation: isolate;
@@ -2175,10 +2175,10 @@ textarea:focus-visible {
   background: #080808;
 }
 
-.hero-slides {
+.hero-section .hero-slides {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
   background: #080808;
 }
@@ -2201,78 +2201,36 @@ textarea:focus-visible {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center center;
 }
 
 .hero-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.94) 0%,
-    rgba(0, 0, 0, 0.78) 48%,
-    rgba(0, 0, 0, 0.35) 100%
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.62) 52%,
+    rgba(0, 0, 0, 0.28) 100%
   );
   pointer-events: none;
 }
 
 .hero-section .hero-content {
   position: relative;
-  z-index: 1;
-}
-
-.hero-indicators {
-  position: absolute;
-  left: 50%;
-  bottom: 24px;
   z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transform: translateX(-50%);
 }
 
-.hero-indicators button {
-  width: 28px;
-  height: 5px;
-  padding: 0;
-  border: 0;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: background 0.25s ease, width 0.25s ease;
+.hero-section .hero-indicators {
+  z-index: 3;
 }
 
-.hero-indicators button.is-active {
-  width: 42px;
-  background: #d4af37;
-}
-
-.hero-indicators button:focus-visible {
-  outline: 2px solid #ffffff;
-  outline-offset: 4px;
-}
-
+/* CENTRE ALL THREE PHOTOS ON MOBILE */
 @media (max-width: 600px) {
   .hero-section .hero-slide img {
-    object-position: center;
-  }
-
-  .hero-section::before {
-    background: rgba(0, 0, 0, 0.72);
-  }
-
-  .hero-indicators {
-    bottom: 14px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-section .hero-slide {
-    transition: none;
+    object-position: center center;
   }
 }
 
