@@ -70,8 +70,25 @@
 
   <main>
 
-    <!-- HERO SECTION -->
+    
+    <!-- HERO SECTION WITH SLIDER -->
     <section class="hero-section" id="home">
+
+      <div class="hero-slides" aria-hidden="true">
+
+        <div class="hero-slide is-active">
+          <img src="images/toyota-harrier.jpeg" alt="">
+        </div>
+
+        <div class="hero-slide">
+          <img src="images/mazda-demio.jpeg" alt="">
+        </div>
+
+        <div class="hero-slide">
+          <img src="images/toyota-noah.jpeg" alt="">
+        </div>
+
+      </div>
 
       <div class="hero-content">
         <p class="eyebrow">YOUR JOURNEY. OUR PRIORITY.</p>
@@ -101,6 +118,25 @@
         <p class="hero-tagline">
           DRIVE SMART | TRAVEL COMFORT | ARRIVE SAFE
         </p>
+      </div>
+
+      <div
+        class="hero-indicators"
+        id="hero-indicators"
+        role="group"
+        aria-label="Choose hero slide"
+      >
+        <button type="button" data-slide="0"
+          class="is-active" aria-label="Show slide 1"
+          aria-pressed="true"></button>
+
+        <button type="button" data-slide="1"
+          aria-label="Show slide 2"
+          aria-pressed="false"></button>
+
+        <button type="button" data-slide="2"
+          aria-label="Show slide 3"
+          aria-pressed="false"></button>
       </div>
 
     </section>
