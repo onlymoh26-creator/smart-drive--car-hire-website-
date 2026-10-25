@@ -556,6 +556,17 @@ textarea:focus-visible {
   background-image: url("images/category-van.jpg");
 }
 
+/* Category image sizing and display */
+.category-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  min-height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Fleet and filters */
 
 .fleet-toolbar {
