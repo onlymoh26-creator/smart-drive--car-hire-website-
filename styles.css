@@ -1345,3 +1345,657 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =========================================================
+   SMART DRIVE — HTML COMPATIBILITY AND HEADER UPDATE
+   Keeps existing styles and matches the current index.html
+   ========================================================= */
+
+/* HEADER: LOGO LEFT, LINKS CENTRE, HAMBURGER RIGHT */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .header-inner {
+  width: calc(100% - 40px);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.site-header .brand {
+  flex: 0 0 auto;
+  margin-right: auto;
+}
+
+.site-header .site-nav {
+  position: static;
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 1.5vw, 22px);
+  width: auto;
+  max-height: none;
+  overflow: visible;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.site-header .site-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  color: var(--silver);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.site-header .site-nav a:hover {
+  background: transparent;
+  color: var(--gold-light);
+}
+
+.site-header .site-nav .nav-cta {
+  padding: 10px 15px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: var(--gold);
+  color: #101010;
+  font-weight: 800;
+}
+
+.site-header .site-nav .nav-cta:hover {
+  background: var(--gold-light);
+  color: #101010;
+}
+
+.site-header .menu-toggle {
+  display: flex;
+  flex: 0 0 46px;
+  margin-left: 0;
+  position: relative;
+  z-index: 1010;
+}
+
+/* BUTTON CLASS NAMES USED BY index.html */
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.91rem;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-gold {
+  background: var(--gold);
+  color: #101010;
+}
+
+.button-gold:hover {
+  background: var(--gold-light);
+}
+
+.button-outline {
+  border-color: var(--gold);
+  background: transparent;
+  color: var(--white);
+}
+
+.button-outline:hover {
+  background: var(--gold);
+  color: #101010;
+}
+
+.button-full {
+  width: 100%;
+}
+
+/* HERO CONTENT AND ACTIONS */
+
+.hero-content {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.hero-description {
+  max-width: 590px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.hero-actions .button {
+  min-width: 155px;
+}
+
+.hero-content .hero-tagline {
+  margin-top: 8px;
+  margin-bottom: 0;
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+/* HERO SLIDESHOW CONTROLS */
+
+.hero-indicators button {
+  width: 28px;
+  height: 5px;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-indicators button.is-active {
+  width: 44px;
+  background: var(--gold);
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  padding: 24px max(20px, calc((100% - 1200px) / 2));
+}
+
+.trust-strip > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-align: center;
+}
+
+.trust-strip strong {
+  color: var(--gold-light);
+  font-size: 1rem;
+}
+
+.trust-strip span {
+  color: var(--silver);
+  font-size: 0.82rem;
+}
+
+/* CATEGORY CARDS AND CATEGORY PHOTOS */
+
+.category-card {
+  padding: 0;
+  justify-content: flex-start;
+}
+
+.category-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  min-height: 180px;
+  flex: 0 0 180px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.category-card-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  flex: 1 1 auto;
+  padding: 18px 20px 22px;
+  background: var(--panel);
+}
+
+.category-card-content h3 {
+  color: var(--white);
+}
+
+.category-card-content p {
+  margin: 0 0 12px;
+  color: var(--silver);
+}
+
+.category-card-content > span {
+  display: inline-block;
+  color: var(--gold-light);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.category-card::before {
+  display: none;
+}
+
+/* FLEET ELEMENTS USED BY index.html */
+
+.fleet-tools {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.search-label {
+  color: var(--silver);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+#vehicle-search {
+  width: 100%;
+  max-width: 420px;
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #3c3c3c;
+  border-radius: 8px;
+  background: #151515;
+  color: var(--white);
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.results-count {
+  margin: 0 0 15px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.vehicle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.vehicle-grid .vehicle-card {
+  min-width: 0;
+}
+
+.empty-message {
+  padding: 35px 20px;
+  border: 1px dashed #454545;
+  border-radius: 12px;
+  color: var(--silver);
+  text-align: center;
+}
+
+/* BOOKING FORM ELEMENTS USED BY index.html */
+
+.booking-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 36px;
+}
+
+.booking-intro h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.booking-intro p {
+  color: var(--silver);
+}
+
+.booking-benefits {
+  display: grid;
+  gap: 12px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.booking-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--silver);
+}
+
+.booking-benefits li::before {
+  color: var(--gold);
+  content: "✓";
+  font-weight: 900;
+}
+
+.booking-form {
+  display: grid;
+  gap: 17px;
+}
+
+.booking-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.booking-form .form-field {
+  min-width: 0;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--success);
+  font-size: 0.88rem;
+}
+
+.form-status:empty {
+  display: none;
+}
+
+/* SERVICES, REVIEWS AND CONTACT */
+
+.services-section .services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.reviews-section .reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.review-placeholder {
+  margin: 0;
+  color: var(--silver);
+}
+
+.contact-banner {
+  padding: 70px 20px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top right, rgba(214, 173, 85, 0.12), transparent 55%),
+    var(--panel);
+}
+
+.contact-banner h2 {
+  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.contact-banner > p:not(.eyebrow) {
+  margin: 0 auto 24px;
+  color: var(--silver);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1.2fr;
+  gap: 35px;
+  padding-bottom: 30px;
+}
+
+.footer-brand .footer-logo {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.footer-brand h2 {
+  font-size: 1rem;
+}
+
+.footer-brand p,
+.footer-grid > div > p {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.footer-grid > div > a {
+  display: block;
+  margin: 7px 0;
+  color: var(--silver);
+  font-size: 0.84rem;
+  overflow-wrap: anywhere;
+}
+
+.footer-grid > div > a:hover,
+.footer-bottom a:hover {
+  color: var(--gold-light);
+}
+
+/* DESKTOP VEHICLE CARD SIZE */
+
+@media (min-width: 901px) {
+  .vehicle-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .vehicle-image-wrap {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    max-height: 190px;
+  }
+
+  .vehicle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .vehicle-card-body {
+    padding: 15px;
+  }
+}
+
+/* TABLET AND MOBILE NAVIGATION */
+
+@media (max-width: 1100px) {
+  .site-header .site-nav {
+    gap: 10px;
+  }
+
+  .site-header .site-nav a {
+    font-size: 0.78rem;
+  }
+
+  .site-header .brand-logo {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-header .header-inner {
+    min-height: 70px;
+    gap: 12px;
+  }
+
+  .site-header .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    width: min(340px, calc(100vw - 30px));
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 0 0 14px 14px;
+    background: #111;
+    box-shadow: var(--shadow);
+  }
+
+  .site-header .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-header .site-nav a {
+    display: flex;
+    justify-content: flex-start;
+    padding: 13px 12px;
+    font-size: 0.92rem;
+    white-space: normal;
+  }
+
+  .site-header .site-nav .nav-cta {
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .site-header .menu-toggle {
+    flex-basis: 46px;
+    margin-left: auto;
+  }
+
+  .booking-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .trust-strip {
+    padding-inline: 20px;
+  }
+
+  .services-section .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .reviews-section .reviews-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 600px) {
+  .site-header .header-inner {
+    width: calc(100% - 30px);
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .site-header .brand {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .site-header .brand-logo {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .site-header .menu-toggle {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+
+  .hero-content {
+    width: calc(100% - 30px);
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .button {
+    flex: 1 1 100%;
+  }
+
+  .trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 10px;
+    padding: 20px 15px;
+  }
+
+  .category-grid,
+  .vehicle-grid,
+  .services-section .services-grid,
+  .reviews-section .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-image {
+    height: 180px;
+    min-height: 180px;
+    flex-basis: 180px;
+  }
+
+  .filter-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    scrollbar-width: thin;
+  }
+
+  .filter-button {
+    flex: 0 0 auto;
+  }
+
+  .booking-form {
+    padding: 20px 15px;
+  }
+
+  .booking-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .contact-banner {
+    padding: 50px 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+
