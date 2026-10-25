@@ -2077,3 +2077,40 @@ textarea:focus-visible {
   }
 }
 
+/* FINAL DESKTOP HEADER POSITION FIX */
+@media (min-width: 769px) {
+  .site-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    min-height: 78px;
+    padding: 10px 24px;
+    gap: 24px;
+  }
+
+  .site-header .brand {
+    flex: 0 0 auto !important;
+    align-self: center !important;
+    margin: 0 !important;
+  }
+
+  .site-header .menu-toggle {
+    display: none !important;
+  }
+
+  .site-header .site-nav {
+    position: static !important;
+    display: flex !important;
+    flex: 1 1 auto !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 20px;
+  }
+}
+
