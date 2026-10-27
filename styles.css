@@ -2286,4 +2286,25 @@ textarea:focus-visible {
     font-size: 0.9rem;
   }
 }
+/* FIX VEHICLE PHOTO FIT ON MOBILE */
+@media (max-width: 600px) {
+  .vehicle-grid .vehicle-image-wrap {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    max-height: none;
+    overflow: hidden;
+    background: #171717;
+  }
+
+  .vehicle-grid .vehicle-image-wrap img,
+  .vehicle-grid img.vehicle-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
 
