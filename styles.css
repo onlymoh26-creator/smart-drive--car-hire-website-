@@ -2352,3 +2352,16 @@ input[type="number"] {
   caret-color: #ffffff;
 }
 
+/* FORCE VEHICLE COUNTER NUMBER TO WHITE */
+#vehicleCount,
+#vehicle-count,
+.vehicle-count,
+.quantity-control input,
+.vehicle-quantity input,
+input[name="vehicles"],
+input[name="numberOfVehicles"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  opacity: 1 !important;
+}
+
