@@ -2248,7 +2248,7 @@ textarea:focus-visible {
   }
 }
 
-/* MOBILE: SHOW TWO VEHICLE CARDS PER ROW */
+/* MOBILE: TWO VEHICLES PER ROW */
 @media (max-width: 600px) {
   .vehicle-grid {
     display: grid;
@@ -2258,40 +2258,13 @@ textarea:focus-visible {
 
   .vehicle-grid .vehicle-card {
     min-width: 0;
-  }
-
-  .vehicle-grid .vehicle-image-wrap {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    max-height: none;
     overflow: hidden;
   }
 
-  .vehicle-grid .vehicle-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .vehicle-grid .vehicle-card-body {
-    padding: 10px;
-  }
-
-  .vehicle-grid .vehicle-card h3 {
-    font-size: 0.95rem;
-    overflow-wrap: anywhere;
-  }
-
-  .vehicle-grid .vehicle-price {
-    font-size: 0.9rem;
-  }
-}
-/* FIX VEHICLE PHOTO FIT ON MOBILE */
-@media (max-width: 600px) {
   .vehicle-grid .vehicle-image-wrap {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     max-height: none;
     overflow: hidden;
     background: #171717;
@@ -2306,5 +2279,18 @@ textarea:focus-visible {
     object-fit: cover;
     object-position: center;
   }
-}
 
+  .vehicle-grid .vehicle-card-body {
+    min-width: 0;
+    padding: 10px;
+  }
+
+  .vehicle-grid .vehicle-card h3 {
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+  }
+
+  .vehicle-grid .vehicle-price {
+    font-size: 0.9rem;
+  }
+}
