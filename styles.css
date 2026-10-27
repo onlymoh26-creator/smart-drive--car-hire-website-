@@ -2248,28 +2248,41 @@ textarea:focus-visible {
   }
 }
 
-/* MOBILE VEHICLE IMAGE FRAME FIX */
+/* VEHICLE PHOTO FRAME — ALL SCREEN SIZES */
+.vehicle-grid .vehicle-image-button {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: #252525;
+  box-sizing: border-box;
+}
+
+.vehicle-grid .vehicle-image-button img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+}
+
+/* TWO VEHICLES PER ROW ON MOBILE */
 @media (max-width: 600px) {
-  .vehicle-grid .vehicle-image-wrap {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    height: auto;
-    overflow: hidden;
-    border-radius: 12px;
-  }
-
-  .vehicle-grid .vehicle-image-wrap img,
-  .vehicle-grid img.vehicle-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-  }
-
   .vehicle-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
+  }
+
+  .vehicle-grid .vehicle-image-button {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
   }
 }
