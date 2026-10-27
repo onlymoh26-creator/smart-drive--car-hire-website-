@@ -240,25 +240,44 @@ document.querySelectorAll("[data-category-link]").forEach(link => {
    SIMILAR VEHICLES
 ========================================= */
 
+
 function showSimilarVehicles(vehicle) {
   if (!similarSection || !similarGrid) return;
 
-  const alternatives = vehicles
-    .filter(item =>
-      item.category === vehicle.category && item.name !== vehicle.name
-    )
-    .slice(0, 4);
+  const alternatives = vehicles.filter(
+    item => item.category === vehicle.category
+  );
+
+  if (alternatives.length === 0) return;
+
+  // Find the selected vehicle within its category.
+  const currentIndex = alternatives.findIndex(
+    item => item.name === vehicle.name
+  );
+
+  if (currentIndex === -1) return;
+
+  // Show the next four vehicles, continuing from the selected vehicle.
+  const nextVehicles = [];
+
+  for (let i = 1; i <= Math.min(4, alternatives.length - 1); i++) {
+    const nextIndex = (currentIndex + i) % alternatives.length;
+    nextVehicles.push(alternatives[nextIndex]);
+  }
 
   similarGrid.replaceChildren();
 
-  alternatives.forEach((item, index) => {
+  nextVehicles.forEach((item, index) => {
     similarGrid.appendChild(createVehicleCard(item, index));
   });
 
-  similarSection.hidden = alternatives.length === 0;
+  similarSection.hidden = nextVehicles.length === 0;
 
-  if (alternatives.length > 0) {
-    similarSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (nextVehicles.length > 0) {
+    similarSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   }
 }
 
