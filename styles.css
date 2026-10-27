@@ -2345,3 +2345,10 @@ a.floating-whatsapp {
   }
 }
 
+/* BOOKING FORM — NUMBER OF VEHICLES */
+input[type="number"] {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+}
+
