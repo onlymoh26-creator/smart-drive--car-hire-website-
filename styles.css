@@ -2306,3 +2306,42 @@ textarea:focus-visible {
     animation: none;
   }
 }
+
+/* SMART DRIVE — FLOATING WHATSAPP BUTTON */
+a.floating-whatsapp {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 20px !important;
+  z-index: 99999 !important;
+
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 13px 18px;
+  border-radius: 50px;
+  background: #25D366;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 700;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.3);
+
+  animation: sd-whatsapp-bounce 2s ease-in-out infinite;
+}
+
+@keyframes sd-whatsapp-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.floating-whatsapp {
+    animation: none;
+  }
+}
+
